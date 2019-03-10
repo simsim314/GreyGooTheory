@@ -1,0 +1,29 @@
+We have class that has: 
+
+√WxH - array of 0,1,2
+
+√It represents a spiral starting at point x, y moving in spiraling way N steps. 
+Now present at x1, y1. 
+
+√We need function that knows to move back and forwards. 
+
+Also each i on the spiral has flag if this is first or second try. 
+If the try fails - we move back our state to 2 and move x1, y1 one step back 
+
+- when cell is added we use spiral to track everything new it opens until R=2. 
+- check there is no contradiction 
+- check if something unknown can be known 
+- if yes apply value and metavalue so that it could be removed later on 
+- go on spiral and open evreything which there is to open including finding contradictions. 
+
+- We need Add and Remove operation to spiral layer. 
+
+Multi spiral class - our creature. 
+- Has several spirals. 
+- actions: it can evolve each spiral for 1 generation / open new spiral. 
+- Has a score of stability. 
+-- We prioratize spirals such that the CGOL state of them is preferably stable. And more weight in the center. 
+
+
+Input from golly*.
+- Have a script that runs inside golly and generates input 
